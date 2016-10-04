@@ -1,0 +1,29 @@
+{>"layouts/master" /}
+	{<body}
+	<a href="addBook" type="button" class="btn-add btn btn-lg btn-success warning_1"><span class="fa fa-plus" style="margin:0em,1em;" ></span>Add Book</a>
+	<table id="tableBook" class="table table-striped">
+	    <thead>
+	      <tr>
+	        <th>Title</th>
+	        <th>Author</th>
+	        <th>Publisher</th>
+	        <th>Action</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	    	{#book}
+	    		<tr>
+	       			<td>{.title}</td>
+	       			<td>{.author}</td>
+	       			<td>{.publisher}</td>       			
+	       			<td><div class="action"><a href="update/{._id}">Update</a> <a href="delete/{._id}">Delete</a></div></td>
+	      		</tr>
+			{/book}	     
+	    </tbody>
+	  </table>
+	 <script>
+	$(document).ready(function() {
+    	$('#tableBook').DataTable();
+	});
+	</script>
+	 {/ body}

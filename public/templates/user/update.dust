@@ -1,0 +1,87 @@
+
+{>"layouts/master" /}       
+  <!--grid-->
+      <script>
+      jQuery(document).ready(function() {
+        jQuery('.categoryid').each(function(){
+          var hidden = $(this).attr('name');
+          jQuery('.idcategory').each(function(){
+            if($(this).attr('value') === hidden){
+                $(this).prop('checked', true);
+            } 
+          })
+        }) 
+      });
+    </script>
+  <div class="validation-system">
+    
+    <div class="validation-form">
+  <!---->
+        
+        <form method="post" action="/book/update/{book._id}">
+          <div class="vali-form">
+            <div class="col-md-12 form-group1 group-mail">
+              <label class="control-label">Title</label>
+              <input type="text" name="title" required="" value="{book.title}">
+            </div>
+            <div class="clearfix"> </div>
+
+
+             <div class="col-md-12 form-group1 group-mail">
+
+             <div class="form-group">
+                  <label for="checkbox" class="col-sm-2 control-label">Category</label>
+                  <div class="col-sm-8">
+                    {#categories}
+                      <div class="checkbox-inline1"><input type="checkbox" class="idcategory" name="categories[]" value={._id} /><label>{.name} </label></div>
+                    {/categories}
+              
+                  </div>
+              </div>
+            <div class="clearfix"> </div>
+          
+            <div class="col-md-12 form-group1 ">
+              <label class="control-label">Decription</label>
+              <textarea name="decription" required="">{book.decription}</textarea>
+            </div>
+             <div class="clearfix"> </div>
+            <div class="col-md-6 form-group1">
+              <label class="control-label">Author</label>
+              <input type="text" name="author" required="" value="{book.author}">
+            </div>
+            <div class="col-md-6 form-group1">
+              <label class="control-label">Publisher</label>
+              <input name="publisher" type="text" placeholder="Publisher" required="" value="{book.publisher}">
+            </div>
+            <div class="clearfix"> </div>
+            <div class="col-md-12 form-group1 group-mail">
+              <label class="control-label">Price</label>
+              <input name="price" type="text" placeholder="Price" required="" value="{book.price}">
+            </div>
+             <div class="clearfix"> </div>
+            <div class="col-md-12 form-group1 group-mail">
+              <label class="control-label">Cover</label>
+              <input name="image" type="text" placeholder="Image" required="" value="{book.image}">
+            </div>
+            {#book.category}
+              <input type="hidden" class="categoryid" name="{._id}" />
+            {/book.category}
+            <div class="offset-right"> <button type="submit" class="btn btn-lg btn-success warning_1">Submit</button> </div>
+            <input type="hidden" name="_csrf" value="{_csrf}"/>
+        </form>
+  <!---->
+</div>
+  <!--//grid-->
+    <!---->
+ 
+    <div class="clearfix"> </div>
+       </div>
+     
+<!---->
+<!--scrolling js-->
+  <script src="/js/jquery.nicescroll.js"></script>
+  <script src="/js/scripts.js"></script>
+  <!--//scrolling js-->
+</body>
+</html>
+

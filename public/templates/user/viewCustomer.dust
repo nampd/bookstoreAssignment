@@ -1,0 +1,62 @@
+{>"layouts/master" /}
+	{<body}
+	<div class=" profile">
+		<div class="profile-bottom">
+			<h3><i class="fa fa-user"></i>Profile</h3>
+			<div class="profile-bottom-top">
+			<div class="col-md-4 profile-bottom-img">
+				<img src="/images/book-manager.png" alt="">
+			</div>
+			<div class="col-md-8 profile-text">
+				<h6>{customer.name}</h6>
+				<table>
+				<tr><td>User name</td>  
+				<td>:</td>  
+				<td>{customer.username}</td></tr>
+				
+				<tr>
+				<td>Phone</td>
+				<td> :</td>
+				<td>{customer.phone}</td>
+				</tr>
+				<tr>
+				<td>Address</td>
+				<td> :</td>
+				<td> {customer.address}</td>
+				</tr>
+				<tr>
+				<td>Birth Day </td>
+				<td>:</td>
+				<td> {customer.birthDay}</td>
+				</tr>
+				<tr>
+				<td>Email </td>
+				<td>:</td>
+				<td> {customer.email}</td>
+				</tr>
+				<tr>
+				<td>History buy </td>
+				<td>:</td>
+				<td> United Arab Emirates</td>
+				</tr>
+				</table>
+			</div>
+			<div class="clearfix"></div>
+			</div>
+			<div class="profile-bottom-bottom">
+		
+			<div class="profile-btn">
+
+                <button type="button" onclick="goBack()" class="btn bg-red">Back</button>
+           <div class="clearfix"></div>
+			</div>
+			 
+			 <script>
+				function goBack() {
+				    window.history.back();
+				}
+			</script>
+			
+		</div>
+	</div>
+	 {/ body}

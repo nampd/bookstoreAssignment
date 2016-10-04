@@ -1,0 +1,31 @@
+{>"layouts/master" /}
+	{<body}
+	<a href="addManager" type="button" class="btn-add btn btn-lg btn-success warning_1"><span class="fa fa-plus" style="margin:0em,1em;" ></span>Add Manager</a>
+	<table id="tableCustomer" class="table table-striped">
+	    <thead>
+	      <tr>
+	        <th>User Name</th>
+	        <th>Name</th>
+	        <th>Address</th>
+	        <th>Email</th>
+	        <th>View</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	    	{#managers}
+	    		<tr>
+	       			<td>{.username}</td>
+	       			<td>{.name}</td>
+	       			<td>{.address}</td>
+	       			<td>{.email}</td>		
+	       			<td><div class="action"><a href="updateManager/{._id}">View</a> </td>
+	      		</tr>
+			{/managers}	     
+	    </tbody>
+	  </table>
+	 <script>
+	$(document).ready(function() {
+    	$('#tableCustomer').DataTable();
+	});
+	</script>
+	 {/ body}

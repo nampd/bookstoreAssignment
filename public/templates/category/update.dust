@@ -1,0 +1,34 @@
+
+{>"layouts/master" /}       
+  <!--grid-->
+  <div class="validation-system">
+    
+    <div class="validation-form">
+  <!---->
+        <form method="post" action="/category/update/{categories._id}">
+          <div class="vali-form">
+            <div class="col-md-12 form-group1 group-mail">
+              <label class="control-label">Name</label>
+              <input type="text" name="name" required="" value="{categories.name}">
+            </div>
+            <div class="clearfix"> </div>
+            <div class="offset-right"> <button type="submit" class="btn btn-lg btn-success warning_1">Submit</button> </div>
+            <input type="hidden" name="_csrf" value="{_csrf}"/>
+        </form>
+    
+  <!---->
+</div>
+  <!--//grid-->
+    <!---->
+ 
+    <div class="clearfix"> </div>
+       </div>
+     
+<!---->
+<!--scrolling js-->
+  <script src="/js/jquery.nicescroll.js"></script>
+  <script src="/js/scripts.js"></script>
+  <!--//scrolling js-->
+</body>
+</html>
+

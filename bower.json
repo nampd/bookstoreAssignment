@@ -1,0 +1,18 @@
+{
+  "name": "bookstore",
+  "description": "A Book store create due to assignment requirement",
+  "main": "index.js",
+  "author": "&gt;Nam dai ca&lt;",
+  "moduleType": [
+    "amd"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ]
+}

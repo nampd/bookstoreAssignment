@@ -1,0 +1,25 @@
+{>"layouts/master" /}
+	{<body }
+	<a href="addCategory" type="button" class="btn-add btn btn-lg btn-success warning_1"><span class="fa fa-plus" style="margin:0em,1em;" ></span>Add Category</a>
+	<table id="tableCategory" class="table table-striped">
+	    <thead>
+	      <tr>
+	        <th>Name</th>
+	        <th>Action</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	    	{#category}
+	    		<tr>
+	       			<td>{.name}</td>      			
+	       			<td><div class="action"><a href="update/{._id}">Update</a> <a href="delete/{._id}">Delete</a></div></td>
+	      		</tr>
+			{/category}	     
+	    </tbody>
+	  </table>
+	  <script>
+	$(document).ready(function() {
+    	$('#tableCategory').DataTable();
+	});
+	</script>
+	 {/ body}
